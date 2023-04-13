@@ -26,5 +26,14 @@ namespace Controllers
                 Console.WriteLine(item.ToString());
             }
         }
+
+        public Book GetBook(string t, Shelf s)
+        {
+            foreach (var book in s.books)
+            {
+                if(book.Title == t) return book;
+            }
+            return null;
+        }
     }
 }
